@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* common CSS */
+.container{
+    width: 1200px;
+}
+img{
+    max-width: 100%;
+
+}
+.row-reverse{
+    flex-direction: row-reverse;
+}
+.flex{
+    display: flex;
+}
+.wrap{
+flex-wrap: wrap;
+}
+.justifycontent{
+    justify-content: center;
+}
+h1{
+    font-size: 25px;
+}
+p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.btn{
+    background-color: rgb(4, 48, 33);
+    color: aliceblue;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 9px; 
+}
+
+    /* navigation */
+    nav{
+        background-color: #222;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li{}
+    nav ul li a{
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 30px;
+        font-size: 22px;
+        display: inline-block;
+        position: relative;
+    }
+    nav ul li a:hover{} 
+
+    nav ul li a::after{
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        transform: scale(0.5);
+
+    }
+    nav ul li:last-child a::after{
+        content: none;
+    }
+
+
+/* herobanner CSS */
+.herobannercontent{
+    flex-basis: 50%;
+    display: flex;
+    padding: 40px 30px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.banner{
+    flex-basis: 50%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 5/6;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: all 1s ease;
+
+}
+
+
+
+@media(max-width:1400px){
+    .container{
+        width: 1100px;
+    }
+    .banner img{
+       
+        aspect-ratio: 6/5;
+      
+    
+    }
+}
+
+@media(max-width:767px){
+    .container{
+       padding: 0 20px;
+        aspect-ratio: 6/5;
+      
+    
+    }
+    .banner img{
+       
+        aspect-ratio: 6/4;
+      
+    
+    }
+    .directioncolumn{
+        flex-direction: column;
+
+    }
+    .herobannercontent{
+        
+        padding: 40px 30px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+    }
+}
+
+
+
+.bannerbg{
+    background-image: url(../images/ben-white-BVUR37XVNfE-unsplash.jpg);
+    background-size: cover;
+    object-fit: cover;
+    height: 50vh;
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.allcat{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    
+}
+   
+   /*.banner .allcat::before{
+    content: "";
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,212,255,0) 100%); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(0.8);
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+.banner:hover .allcat::before{
+    opacity: 1;
+
+    transform: scale(1);
+}
+      */
+
+
+
+
+
+.allcat a{
+background-color: #fff;
+color: #222;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 9px;
+font-size: 15px;
+margin-left: -20px;
+opacity: 0;
+transition: all 0.4s ease;
+display: flex;
+gap: 10px;
+}
+.allcat a span{
+   margin-left: -20px;
+   transition: all 0.4s ease;
+   opacity: 0;
+}
+.allcat a:hover span{
+    margin-left: 0;
+    opacity: 1;
+}
+    
+
+
+.allcat a:hover{
+
+}
+
+.banner:hover .allcat a{
+    opacity: 1;
+    margin-left: 0;
+}
+
+.banner:hover .allcat{
+    
+}
+.banner:hover img{
+    transform: scale(1.05);
+   
+}
+
+
+
+
+
+
+
+
+/*  .bannerbg{
+ background-image: url(../images/ben-white-BVUR37XVNfE-unsplash.jpg);
+ background-size: cover;
+ border-radius: 12px;
+ height: 50vh;
+ object-fit: cover;
+ background-color: aqua;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+    
+}
+.allcat{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+.allcat a{
+    background-color: aliceblue;
+    color: #222;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 12px;
+    opacity: 0;
+    transition: all 0.4s ease;
+    margin-left: -20px;
+
+    
+}
+.allcat a:hover{
+    background-color:#222;
+    color: #fff;
+
+}
+.banner:hover .allcat a{
+    opacity: 1;
+    margin-left: 0;
+
+}
+
+     */
+    
